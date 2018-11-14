@@ -7,12 +7,12 @@ function randomColorGenerator() {
     let color = "#";
     for (let index = 0; index < 6; index++) {
         let randomNumber = Math.floor(Math.random() * colorSet.length);
-        color += colorSet[randomNumber];     
+        color += colorSet[randomNumber];
     }
     body.style.backgroundColor = color;
     element.innerHTML = color;
     if(tinycolor(color).isLight()) {
-        body.style.color = "#2e2e2e";
+        body.style.color = "#1e272e";
     } else {
         body.style.color = "#ffffff";
     }
@@ -21,17 +21,17 @@ function randomColorGenerator() {
 function fontColor(color) {
     if (color.substring(0,3) == "#00" || color.substring(0,3) == "#010") {
         console.log("Light color");
-        
+
     }
-    
+
 
 }
 
 window.onload = function() {
     if (counter == 0) {
-        element.innerHTML = "Press Space Bar to get Color";
+        element.innerHTML = "Press Space To Get Color";
     }
-    
+
     document.body.onkeyup = function(e) {
         if (e.keyCode == 32) {
             randomColorGenerator();
